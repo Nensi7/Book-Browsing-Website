@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="project.SiteMaster" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Readapp - Your Book Companion</title>
+    <link href="~/App_Themes/ReadTheme/StyleSheet.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .header {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .menu a {
+                padding: 10px;
+                font-size: 16px;
+            }
+            .header {
+                font-size: 25px;
+                padding: 15px 0;
+            }
+        }
+
+        /* Content Area */
+        #MainContent {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">Readapp</div>
+
+        <div class="menu">
+            <asp:HyperLink NavigateUrl="~/Login.aspx" Text="Login" runat="server" />
+            <asp:HyperLink NavigateUrl="~/registration.aspx" Text="Register" runat="server" />
+            <asp:HyperLink NavigateUrl="~/exploreByCategory.aspx" Text="Explore" runat="server" />
+            <asp:HyperLink NavigateUrl="~/recommendation.aspx" Text="Recommendation" runat="server" />
+            <asp:HyperLink NavigateUrl="~/topRated.aspx" Text="Top Rated" runat="server" />
+        </div>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    </form>
+</body>
+</html>
