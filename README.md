@@ -26,8 +26,8 @@ A fully functional **Book Browsing Website** developed using **C# .NET**, focuse
 - 🧭 **Explore Section**
   - Discover newly added or recommended books
     
-- 🔍 **Search Functionality**
-  - Find books by title or author (if implemented)
+- 🔍 **General Section**
+  - Find books by title or author 
 
 ---
 
